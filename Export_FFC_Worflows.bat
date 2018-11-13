@@ -7,9 +7,9 @@
 :: Configure the backup directory
 :: Automate this script by setting it as a target for a Windows Scheduled Task
 ::
-:: @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+:: @copyright     Copyright FujiXeroxAustralia Professional Services
 :: @link          https://github.com/fxaps/FreeFlowCoreScripts
-:: @version       1.0.0
+:: @version       1.0.1
 :: @author        Andrew.Rajcany@aus.fujixerox.com
 ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
