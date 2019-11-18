@@ -1,10 +1,14 @@
 #Enable Roles and Features for XMPie and FFcore
 #Tested on Server 2012r2
+#Tested on Server 2016
+#Tested on Server 2019
 
 Install-WindowsFeature "FileAndStorage-Services"
 Install-WindowsFeature "File-Services"
 Install-WindowsFeature "FS-FileServer"
 Install-WindowsFeature "Storage-Services"
+Install-WindowsFeature "Print-Services"
+Install-WindowsFeature "Print-Server"
 Install-WindowsFeature "Web-Server"
 Install-WindowsFeature "Web-WebServer"
 Install-WindowsFeature "Web-Common-Http"
