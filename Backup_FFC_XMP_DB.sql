@@ -1,3 +1,21 @@
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::
+:: FreeFlow Core and XMPie DB backup script
+::
+:: Note:
+:: Configure the backup directory
+::
+:: @copyright     Copyright FujiXeroxAustralia Professional Services
+:: @link          https://github.com/fxaps/FreeFlowCoreScripts
+:: @date          2020-02-25
+:: @version       1.0.1
+:: @author        Andrew.Rajcany@aus.fujixerox.com
+::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+
+USE Master
 SET NOCOUNT ON
 
 DECLARE @dbFolderName as varchar(50)
@@ -7,10 +25,19 @@ DECLARE @dbNameSuffix as varchar(50)
 DECLARE @dbNameExtension as varchar(50)
 DECLARE @dbBackupName as varchar(1024)
 
-
+/*
+Folder to save the DB backups to
+-- please ensure the folder exists on the SQL server
+-- please include a trailing slash e.g. 'D:\DB_Backups\' if you need to change the directory
+ */
 SET @dbFolderName = N'D:\DB_Backups\'
-SET @dbDate = replace(replace(replace(convert(varchar(20), GETDATE(), 120), ' ', '_'), ':', ''), '-',
-                      '') --data and time stamp
+
+
+/*
+Define some variables
+-- modify as needed but the default should work fine
+ */
+SET @dbDate = replace(replace(replace(convert(varchar(20), GETDATE(), 120), ' ', '_'), ':', ''), '-', '')
 SET @dbNameSuffix = ''
 SET @dbNameExtension = N'.bak'
 
