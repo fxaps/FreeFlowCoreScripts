@@ -1,7 +1,10 @@
-#Enable Roles and Features for FF Core
-#Tested on Windows 10 Pro Build
-
-#(Get-WmiObject -class Win32_OperatingSystem)
+# Enable Roles and Features for FF Core
+#
+# Tested on the following Windows 10 Pro build number/s
+# 10.0.19044.0 Microsoft Windows NT 10.0.19044.0
+#
+# To get you current Windows 10 build number use the following command in Windows PowerShell
+# [System.Environment]::OSVersion
 
 Enable-WindowsOptionalFeature -Online -FeatureName "Printing-PrintToPDFServices-Features" -All
 Enable-WindowsOptionalFeature -Online -FeatureName "Printing-XPSServices-Features" -All
